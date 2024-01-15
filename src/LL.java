@@ -139,14 +139,14 @@ public class LL {
 //        head.next = null;
 //        head = prevNode;
 //    }
-    public  reverseRecursive(Node head){
-        if(head == null || head.next == null){
-            return head;
-        }
-        Node newHead = reverseRecursive(head.next);
-        head.next.next = head;
-        head.next = null;
-    }
+    // public  reverseRecursive(Node head){
+    //     if(head == null || head.next == null){
+    //         return head;
+    //     }
+    //     Node newHead = reverseRecursive(head.next);
+    //     head.next.next = head;
+    //     head.next = null;
+    // }
     public static void main(String[] args){
 //        LinkedList<String> list = new LinkedList<String>();
 //        list.addFirst("a");
@@ -177,7 +177,7 @@ public class LL {
 //        list.addLast(String.valueOf(4));
         list.printList();
 
-        list. reverseRecursive(list.head);
+        // list. reverseRecursive(list.head);
         list.printList();
     }
 }
