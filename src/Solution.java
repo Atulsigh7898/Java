@@ -52,5 +52,9 @@ public class Solution {
             }
         }
     }
+    public boolean isPalindrome(ListNode head) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'isPalindrome'");
+    }
     
 }
