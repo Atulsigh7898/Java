@@ -1,62 +1,65 @@
 package Queue;
 
+// // package Queue;
+// import java.util.Queue;
+// import java.util.Stack;
+
 import java.util.*;
 
 public class QueueY {
-    static class Queue {
-        static int arr[];
-        static int size;
-        static int rear = -1;
+    static class Queue{
+        static Stack<Integer> s1 = new Stack<>();
+        static Stack<Integer> s2 = new Stack<>();
+        public static boolean isEmpty(){
+            return s1.isEmpty();
 
-        Queue(int size) {
-            arr = new int[size];
-            this.size = size;
         }
+        public static void add(int data){
+            while(!s1.isEmpty()){
+                s2.push(s1.pop());
 
-        public static boolean isEmpty() {
-            return rear == -1;
-        }
-
-        public static void add(int data) {
-            if (rear == size - 1) {
-                System.out.println("Full queue");
-                return;
             }
-            rear++;
-            arr[rear] = data;
-        }
+            s1.push(data);
 
-        public static int remove() {
-            if (isEmpty()) {
+            while(!s1.isEmpty()){
+                s1.push(s2.pop());
+            }
+        }
+        public static int remove(){
+            if(isEmpty()){
                 System.out.println("Empty queue");
                 return -1;
             }
-            int front = arr[0];
-            for (int i = 0; i <= rear; i++) {
-                arr[i] = arr[i + 1];
-            }
-            rear--;
-            return front;
+            return s1.pop();
         }
-
-        public static int peek() {
-            if (isEmpty()) {
+        public static int peek(){
+            if(isEmpty()){
                 System.out.println("Empty queue");
                 return -1;
             }
-            return arr[0];
+            return s1.peek();
         }
+
     }
 
     public static void main(String[] args) {
-        Queue q = new Queue(5);
+        // Queue q = new Queue(5);
+        // Queue<Integer> q = new LinkedList<>();
+        Queue q = Queue();
         q.add(1);
         q.add(2);
         q.add(3);
+        q.add(4);
+        q.add(5);
 
         while (!q.isEmpty()) {
             System.out.println(q.peek());
             q.remove();
         }
+    }
+
+    private static Queue Queue() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'Queue'");
     }
 }
