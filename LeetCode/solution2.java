@@ -1,4 +1,4 @@
-class Solution {
+class Solution2 {
     public int rangeBitwiseAnd(int left, int right) {
       int shifts = 0;
       while (left != right) {
