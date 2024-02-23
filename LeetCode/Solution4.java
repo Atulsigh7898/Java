@@ -1,6 +1,7 @@
 import java.util.*;
 
-class Solution4 {
+class Solution4
+ {
     public int findCheapestPrice(int n, int[][] flights, int src, int dst, int k) {
         Map<Integer, List<int[]>> graph = new HashMap<>();
         
