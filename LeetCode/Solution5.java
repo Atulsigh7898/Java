@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+class Solution5 {
     public List<Integer> getSecretHolders(int n, int[][] meetings, int firstPerson) {
         // Create an adjacency list to represent the meetings
         Map<Integer, List<int[]>> adjacencyList = new HashMap<>();
